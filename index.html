@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cataas - Cats as a Service</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🐱 Cataas - Cats as a Service</h1>
+        <p>Geniesse süße Katzenbilder!</p>
+      </header>
+
+      <main>
+        <div class="controls">
+          <div class="input-group">
+            <label for="catText">Text auf Bild:</label>
+            <input
+              type="text"
+              id="catText"
+              placeholder="Gib einen Text ein..."
+              maxlength="50"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="tagSelect">Nach Tag filtern:</label>
+            <select id="tagSelect">
+              <option value="">- Alle Katzen -</option>
+            </select>
+          </div>
+
+          <div class="button-group">
+            <button id="loadBtn" class="btn btn-primary">
+              🔄 Neue Katze laden
+            </button>
+            <button id="downloadBtn" class="btn btn-secondary">
+              ⬇️ Bild herunterladen
+            </button>
+          </div>
+        </div>
+
+        <div class="image-container">
+          <img id="catImage" src="" alt="Katze" loading="lazy" />
+          <div id="loadingSpinner" class="spinner hidden"></div>
+        </div>
+
+        <div class="info">
+          <p id="catInfo">Klick auf "Neue Katze laden" um zu starten!</p>
+        </div>
+      </main>
+
+      <footer>
+        <p>
+          Powered by <a href="https://cataas.com" target="_blank">Cataas API</a>
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
